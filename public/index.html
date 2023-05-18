@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <div class="container">
+            <span class="form__title" id="signup-title" >Sign up</span>
+			<form class="form" id="signup-form" action="/register" method="post">
+				<div class="form__group">
+					<i class="ri-user-line form__icon"></i>
+					<input type="text" placeholder="Name" required class="form__input" name="name" />
+					<span class="form__bar"></span>
+				</div>
+				<div class="form__group">
+					<i class="ri-mail-line form__icon"></i>
+					<input type="text" placeholder="Email" required class="form__input"  name="email"/>
+					<span class="form__bar"></span>
+				</div>
+				<div class="form__group">
+					<i class="ri-lock-line form__icon"></i>
+					<input
+						type="password"
+						placeholder="Password"
+						required
+						class="form__input"
+						name="password"
+					/>
+					<span class="form__bar"></span>
+				</div>
+				<div class="form__group">
+					<i class="ri-lock-line form__icon"></i>
+					<input
+						type="password"
+						placeholder="Confirm password"
+						required
+						class="form__input"
+						name="confirmPassword"
+					/>
+					<span class="form__bar"></span>
+				</div>
+				<button type="submit" class="form__button">Sign up</button>
+				<p class="form__switch">
+					Already have an account? <a href="#" id="signin-btn">Login</a>
+				</p>
+			</form>
+
+
+            <span class="form__title hidden" id="signin-title">Sign In</span>
+            <form class="form hidden" id="signin-form" method="POST" action="/login">
+                <div class="form__group">
+                    <i class="ri-mail-line form__icon"></i>
+                    <input type="text" placeholder="Email" required class="form__input" />
+                    <span class="form__bar"></span>
+                </div>
+                <div class="form__group">
+                    <i class="ri-lock-line form__icon"></i>
+                    <input type="password" placeholder="Password"  required class="form__input"  />
+                    <span class="form__bar"></span>
+                </div>
+                <button type="submit" class="form__button" value="registers" onClick="{postData}">Sign in</button>
+                <p class="form__switch">
+                    Don't have an account? <a href="#" id="signup-btn">Sign up</a>
+                </p>
+            </form>
+    </div>
+</body>
+
+<script src="script.js"></script>
+
+</html>
